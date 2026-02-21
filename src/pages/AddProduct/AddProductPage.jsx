@@ -226,7 +226,7 @@ import { validate } from "./utilis/formValidate";
 import useFetchProducts from "../products/hooks/useFetchProducts";
 import { useMutation, useQueryClient } from "@tanstack/react-query";
 import { useNavigate } from "react-router-dom";
-import styles from "./AddProductPage.module.css";
+import styles from "./addProductPage.module.css";
 
 const categoryArr = [
   { name: "All", value: "all" },
