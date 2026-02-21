@@ -94,7 +94,7 @@ function LoginPage() {
               value={username}
               onChange={(e) => setUsername(e.target.value)}
               className={styles.input}
-              placeholder="usernam"
+              placeholder="username"
               required
             />
           </div>

@@ -19,12 +19,13 @@
 ## Trade-offs
 
 - Auth is fake (for demo only).
+- the username is admin and the password is 1234
 - Chart updates only for current page products, not full dataset.
 - No backend update or real DB interaction.
 
 ## Next Steps
 
+- refctor codes to make th codebase clearner
 - Implement real login/auth backend.
 - Add create/update/delete product functionality.
 - Improve charts with brand trends over all pages.
-- Add tests for filters and pagination.
