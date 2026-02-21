@@ -4,6 +4,7 @@ import styles from "../Spinner/spinner.module.css";
  * @param {{label?:string}} props
  
  */
+//
 export default function Spinner({ label = "Loading" }) {
   return (
     <div className={styles.overlay} role="status" aria-label={label}>
@@ -36,6 +37,6 @@ export default function Spinner({ label = "Loading" }) {
 }
 //  for create react app
 // npm install --save-dev @testing-library/react @testing-library/jest-dom
-
+// take note
 // for vite
 // npm install --save-dev vitest @testing-library/react @testing-library/jest-dom @testing-library/user-event jsdom
