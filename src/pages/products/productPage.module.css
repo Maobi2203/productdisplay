@@ -85,14 +85,24 @@
   font-size: 0.95rem;
 }
 
-.select,
-.input {
+.select {
   width: 100%;
   padding: 12px 16px;
   border: 1px solid #d1d5db;
   border-radius: 8px;
   font-size: 1rem;
   background: white;
+  transition: border-color 0.2s;
+}
+
+.input {
+  width: 80%;
+  padding: 12px 16px;
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+  font-size: 1rem;
+  /* background: red; */
+  /* color: red; */
   transition: border-color 0.2s;
 }
 
