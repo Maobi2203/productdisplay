@@ -48,7 +48,7 @@
 // LoginPage.jsx
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import styles from "./LoginPage.module.css";
+import styles from "./loginPage.module.css";
 
 function LoginPage() {
   const [username, setUsername] = useState("");
