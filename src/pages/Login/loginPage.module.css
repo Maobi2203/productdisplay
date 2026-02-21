@@ -70,6 +70,7 @@
   background: #ffffff;
   transition: all 0.2s ease;
   outline: none;
+  color: black;
 }
 
 .input:focus {
