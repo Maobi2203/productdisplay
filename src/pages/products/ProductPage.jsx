@@ -232,8 +232,8 @@ import ErrorPage from "../../ui/Errorpage/ErrorPage";
 import ProductBrandChart from "../../ui/charts/ProductBrandChart/ProductBrandChart";
 import Spinner from "../../ui/Spinner/Spinner";
 // import styles from "./ProductPage.module.css";
-import styles from "../products/ProductPage.module.css";
-
+// import styles from "../products/ProductPage.module.css";
+import styles from "../products/productPage.module.css";
 const categoryArr = [
   { name: "All", value: "all" },
   { name: "Beauty", value: "beauty" },
