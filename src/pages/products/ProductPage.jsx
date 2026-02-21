@@ -231,7 +231,8 @@ import { Link, useNavigate } from "react-router-dom";
 import ErrorPage from "../../ui/Errorpage/ErrorPage";
 import ProductBrandChart from "../../ui/charts/ProductBrandChart/ProductBrandChart";
 import Spinner from "../../ui/Spinner/Spinner";
-import styles from "./ProductPage.module.css";
+// import styles from "./ProductPage.module.css";
+import styles from "../products/ProductPage.module.css";
 
 const categoryArr = [
   { name: "All", value: "all" },
