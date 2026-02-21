@@ -1,4 +1,5 @@
-import styles from "./Spinner.module.css";
+// import styles from "./Spinner.module.css";
+import styles from "../Spinner/spinner.module.css";
 /**
  * @param {{label?:string}} props
  
