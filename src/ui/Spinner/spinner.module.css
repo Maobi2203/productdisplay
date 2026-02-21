@@ -1,0 +1,189 @@
+.overlay {
+  position: fixed;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: #050508;
+  z-index: 9999;
+  gap: 2.5rem;
+}
+
+.scene {
+  position: relative;
+  width: 120px;
+  height: 120px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* background-color: red; */
+}
+
+/* outermost ring-slow ,this moves clockwise */
+
+.outerRing {
+  position: absolute;
+  inset: 0;
+  border-radius: 50%;
+  border: 1.5px solid transparent;
+  border-top-color: #e2c9ff;
+  animation: spinCW 2.8s cubic-bezier(0.37, 0, 0.63, 1) infinite;
+}
+
+/* Middle ring — speed is medium, moves counter-clockwise,  */
+
+.midRing {
+  position: absolute;
+  inset: 16px;
+  border-radius: 50%;
+  border: 2px solid transparent;
+  border-top-color: #a78bfa;
+  border-left-color: #a78bfa55;
+  animation: spinCCW 1.9s cubic-bezier(0.37, 0, 0.63, 1) infinite;
+}
+
+/* inner ring, moves clockwise and fast */
+.innerRing {
+  position: absolute;
+  inset: 32px;
+  border-radius: 50%;
+  border: 2.5px solid transparent;
+  border-top-color: #7c3aed;
+  border-right-color: #7c3aed66;
+  animation: spinCW 1.1s cubic-bezier(0.37, 0, 0.63, 1) infinite;
+}
+
+.core {
+  position: absolute;
+  inset: 46px;
+  border-radius: 50%;
+  background: radial-gradient(circle at 35% 35%, #c4b5fd, #7c3aed 60%, #4c1d95);
+  box-shadow:
+    0 0 18px 4px #7c3aed88,
+    0 0 40px 8px #7c3aed33;
+  animation: pulse 2s ease-in-out infinite;
+}
+.orbiter {
+  position: absolute;
+  inset: 0;
+
+  animation: spinCW 1.9s linear infinite;
+}
+
+.orbiter::after {
+  content: "";
+  position: absolute;
+  top: 6px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: #e2c9ff;
+  box-shadow: 0 0 10px 3px #a78bfa;
+}
+
+/* this creates a halo glow behind everything */
+.ringContainer {
+  position: absolute;
+  inset: -20px;
+  border-radius: 50%;
+  background: radial-gradient(circle, #7c3aed18 0%, transparent 70%);
+  animation: haloBreath 2.8s ease-in-out infinite;
+}
+
+/* Text label */
+
+.label {
+  font-family: "DM Mono", "Fira Code", "Courier New", monospace;
+  font-size: 0.7rem;
+  font-weight: 500;
+  letter-spacing: 0.35em;
+  text-transform: uppercase;
+  color: #a78bfa;
+  opacity: 0.85;
+  animation: labelFade 2s ease-in-out infinite;
+}
+.dots span {
+  display: inline-block;
+  animation: dotBounce 1.4s ease-in-out infinite;
+  color: #7c3aed;
+}
+.dots span:nth-child(2) {
+  animation-delay: 0.2s;
+}
+.dots span:nth-child(3) {
+  animation-delay: 0.4s;
+}
+
+/* keyframes */
+
+@keyframes spinCW {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(-360deg);
+  }
+}
+
+@keyframes spinCCW {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(-369deg);
+  }
+}
+
+@keyframes pulse {
+  0%,
+  100% {
+    transform: scale(1);
+    box-shadow:
+      0 0 18px 4px #7c3aed88,
+      0 0 40px 8px #7c3aed33;
+  }
+  50% {
+    transform: scale(1.12);
+    box-shadow:
+      0 0 28px 8px #a78bfaaa,
+      0 0 60px 14px #7c3aed55;
+  }
+}
+
+@keyframes haloBreath {
+  0%,
+  100% {
+    opacity: 0.6;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.08);
+  }
+}
+
+@keyframes labelFade {
+  0%,
+  100% {
+    opacity: 0.5;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+
+@keyframes dotBounce {
+  0%,
+  80%,
+  100% {
+    transform: translateY(0);
+    opacity: 0.4;
+  }
+  40% {
+    transform: translateY(-5px);
+    opacity: 1;
+  }
+}
